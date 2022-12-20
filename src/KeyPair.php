@@ -14,17 +14,17 @@ class KeyPair
      */
     public function __construct()
     {
-        $this->privateKey = base64_encode(random_bytes(32));
+        $this->privateKey = random_bytes(32);
         $this->publicKey = (new Curve25519())->getPublicKeyFromPrivateKey($this->privateKey);
     }
 
     public function getPrivateKey(): string
     {
-        return $this->privateKey;
+        return base64_encode($this->privateKey);
     }
 
     public function getPublicKey(): string
     {
-        return $this->publicKey;
+        return base64_encode($this->publicKey);
     }
 }
