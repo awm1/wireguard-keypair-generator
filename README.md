@@ -1,2 +1,2 @@
 # wireguard-keypair-generator
-generates keypairs without using CLI wg tool
+generates key pairs without using CLI wg tool

@@ -1,0 +1,16 @@
+{
+    "name": "awm1/wireguard-keypair-generator",
+    "description": "generates key pairs without using CLI wg tool",
+    "type": "library",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Vladimir Klimes",
+            "email": "awm1klimes8vladimir@gmail.com"
+        }
+    ],
+    "require": {
+        "php": ">=7.4",
+        "deemru/curve25519": "^1.0"
+    }
+}
