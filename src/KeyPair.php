@@ -14,7 +14,9 @@ class KeyPair
      */
     public function __construct()
     {
-        $this->privateKey = random_bytes(32);
+        do {
+            $this->privateKey = random_bytes(32);
+        } while (!empty(strpbrk($this->getPrivateKey(), '+/')));
         $this->publicKey = (new Curve25519())->getPublicKeyFromPrivateKey($this->privateKey);
     }
 
